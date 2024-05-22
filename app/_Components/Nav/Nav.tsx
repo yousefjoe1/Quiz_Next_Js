@@ -12,7 +12,7 @@ const Nav = async () => {
       <h3 className="lg:text-3xl text-lg bold text-slate-800 ">Quiz</h3>
 
       {/* if getinfo false hide cart */}
-      {isTrue == true ? <Cart /> : "cart unavailable"}
+      {/* {isTrue == true ? <Cart /> : "cart unavailable"} */}
     </nav>
   );
 };
