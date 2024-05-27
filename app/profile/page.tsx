@@ -43,7 +43,7 @@ const page = async () => {
       >
         <div className="flex flex-wrap justify-between w-full gap-4 mt-3">
           {status == true ? (
-            data.map((course: Course) => (
+            [...data].reverse().map((course: Course) => (
               <Link
                 key={course.id}
                 href={`/course/${course.id}`}
