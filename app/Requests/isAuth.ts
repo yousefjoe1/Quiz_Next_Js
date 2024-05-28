@@ -21,12 +21,12 @@ export const isAuth = async () => {
             headers: { Authorization: `Bearer ${cookValue}` },
         }
     ).then(res => {
-        console.log(res);
+        // console.log(res);
         
         isTrue = true;
         return false;
     }).catch(er => {
-        console.log(er);
+        // console.log(er);
 
         isTrue = true;
         return false;

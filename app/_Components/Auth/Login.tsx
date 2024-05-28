@@ -1,6 +1,6 @@
 "use client";
 import postData from "@/app/Requests/postData";
-import { useToast } from "@chakra-ui/react";
+import { Spinner, useToast } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import React, { useRef, useState } from "react";
 
@@ -77,7 +77,8 @@ const Login = () => {
         </div>
 
         {isSubmit ? (
-          "Sending .........."
+          <Spinner size={"2xl"} height={50} width={1} />
+          
         ) : (
           <button
             className="p-2 bg-slate-500 hover:text-white outline-none border-none block rounded-lg"

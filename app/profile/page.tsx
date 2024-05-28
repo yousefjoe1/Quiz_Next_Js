@@ -25,7 +25,7 @@ interface Course {
 
 const page = async () => {
   const { data, status,err } = await getData("course",true);
-  console.log(data,'data c');
+  // console.log(data,'data c');
   
   
   return (

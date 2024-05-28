@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Button, useToast } from "@chakra-ui/react";
+import { Button, Spinner, useToast } from "@chakra-ui/react";
 
 import { FaCartPlus } from "react-icons/fa";
 
@@ -22,7 +22,7 @@ const BuyBtn = ({
 
   const buyCourse = async () => {
     if (isEnrolled) {
-      msg({ title: "You Are In 👌", status: "success", duration: 3000 });
+      msg({ title: "You Are In 👌", status: "success", duration: 3000 ,isClosable: true});
       return;
     }
 
@@ -32,9 +32,9 @@ const BuyBtn = ({
 
     if (res.state == "error") {
       setIsSubmit(false);
-      msg({ title: res.message, status: "error", duration: 3000 });
+      msg({ title: res.message, status: "error", duration: 3000 ,isClosable: true});
     } else {
-      msg({ title: res.message, status: "success", duration: 3000 });
+      msg({ title: `${res.message} Congratulations`, status: "success", duration: 3000,isClosable: true });
       setIsSubmit(false);
     }
   };
@@ -43,7 +43,8 @@ const BuyBtn = ({
     <ChakraUi>
       {
         isSubmit ?
-        'submit':
+        <Spinner size={'2xl'} height={50} width={1} />
+        :
 
       <Button
       onClick={buyCourse}
