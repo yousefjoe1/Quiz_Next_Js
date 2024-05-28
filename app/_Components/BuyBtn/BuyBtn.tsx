@@ -34,7 +34,7 @@ const BuyBtn = ({
       setIsSubmit(false);
       msg({ title: res.message, status: "error", duration: 3000 ,isClosable: true});
     } else {
-      msg({ title: `${res.message} Congratulations`, status: "success", duration: 3000,isClosable: true });
+      msg({ title: `Congratulations 👍`, status: "success", duration: 3000,isClosable: true });
       setIsSubmit(false);
     }
   };
